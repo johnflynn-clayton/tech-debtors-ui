@@ -13,7 +13,6 @@ const CreateMap = ({selectedCoords}) => {
   if(selectedCoords.length > 0){
     selectedCoords.map((item, key) => (
       myMap.on('load', function() {
-        console.log(item);
         var pointName = "point" + key.toString();
           var point = {
             type: 'FeatureCollection',

@@ -46,7 +46,6 @@ const MapContainer = () => {
     },[])
     */
         useEffect(() => {
-          console.log(selectedCoords)
             CreateMap({selectedCoords})
         }, [selectedCoords])
 
