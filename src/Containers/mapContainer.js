@@ -4,7 +4,6 @@ import MapComponent from '../Components/mapComponent';
 import CreateMap from '../Functions/createMap';
 
 const MapContainer = () => {
-    
     const [coords] = useState([
         {
         Id: 1,
@@ -21,7 +20,6 @@ const MapContainer = () => {
           latitude: 35,
           longitude: -90
         }
-
     ])
   
   const [selectedCoords, setSelectedCoords] = useState(coords);
@@ -48,7 +46,6 @@ const MapContainer = () => {
         useEffect(() => {
             CreateMap({selectedCoords})
         }, [selectedCoords])
-
 
     return(
     <>

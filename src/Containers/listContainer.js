@@ -1,11 +1,9 @@
-
 import ListComponent from "../Components/listComponent";
-
 
 const ListContainer = ({coords, setSelectedCoords}) => {
 
-
-    const setSelectedCoord = (item) => {
+    const setSelectedCoord = (item, event) => {
+      console.log(event);
         setSelectedCoords([coords[item]])
     }
 

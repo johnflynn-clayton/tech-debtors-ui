@@ -5,8 +5,8 @@ const CreateMap = ({selectedCoords}) => {
 
   const myMap = new TrimbleMaps.Map({
     container: "myMap",
-    center: new TrimbleMaps.LngLat(-95, 35),
-    zoom: 3,
+    center: new TrimbleMaps.LngLat(-85, 35),
+    zoom: 4,
     Regions: TrimbleMaps.Common.Region.NA
   });
 
@@ -36,10 +36,25 @@ const CreateMap = ({selectedCoords}) => {
           myMap.addLayer({
             'id': pointName,
             'source': pointName,
+            /*
             'type': 'circle',
             'paint': {
               'circle-color': "blue",
               'circle-radius': 7
+            }
+            */
+            'type': 'symbol',
+            'layout': {
+              'icon-image': 'flag-outline-green',
+              'icon-allow-overlap': true,
+              'text-offset': [0,1],
+              'text-anchor': 'top',
+              'text-font': ['Roboto Regular'],
+              'text-optional': true,
+              'text-field': [
+                'format',
+                `${item.Id}`, {'font-scale': 0.9, 'text-color': '#333333'},
+              ]
             }
         });
       })
