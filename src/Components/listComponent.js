@@ -11,7 +11,7 @@ const ListComponent = ({coords, setSelectedCoord, setAllCoords}) => {
                 coords.map((item, key) => {
                     return(
                     <ListGroup.Item key={key} action onClick={(event) => setSelectedCoord(key, event.target)}>
-                        Id({item.Id}) Latitude({item.latitude}) Longitude({item.longitude})
+                        Id({key}) Latitude({item.latitude}) Longitude({item.longitude})
                     </ListGroup.Item>
                     )
                 })
