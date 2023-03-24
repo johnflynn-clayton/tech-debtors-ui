@@ -2,8 +2,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 const ListComponent = ({coords, setSelectedCoord, setAllCoords}) => {
   return (
-    <div className='listContainer'>
-        <ListGroup style={{width: '25%'}}>
+    <div className='listContainer bg-gray-900 justify-end'>
+        <ListGroup className='listContainer bg-gray-900 justify-end'>
             <ListGroup.Item action onClick={() => setAllCoords()}>
                     Select All
             </ListGroup.Item>
@@ -22,3 +22,4 @@ const ListComponent = ({coords, setSelectedCoord, setAllCoords}) => {
 }
 
 export default ListComponent;
+

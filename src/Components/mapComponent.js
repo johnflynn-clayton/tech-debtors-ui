@@ -1,7 +1,7 @@
 
 function MapComponent() {
     return (
-      <div className="App">
+      <div className="App box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5)">
         <div id="myMap" style={{
           height: '50vw', 
           width: '60vw',
